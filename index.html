@@ -6,39 +6,77 @@
     <title>严立超的个人网页</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
             color: #333;
         }
         header {
-            background-color: #4CAF50;
+            background: linear-gradient(to right, #4CAF50, #81C784);
             color: white;
-            padding: 1rem 0;
+            padding: 2rem 0;
             text-align: center;
+            position: relative;
+        }
+        header::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 5px;
+            background: #fff;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         }
         .container {
             width: 80%;
             margin: auto;
             overflow: hidden;
-            padding: 1rem;
-            background-color: white;
+            padding: 2rem 0;
+        }
+        .info, .section {
+            margin-bottom: 3rem;
         }
         h1, h2 {
             text-align: center;
+            margin-bottom: 1rem;
         }
-        .info, .section {
-            margin-bottom: 2rem;
+        .info p, .section p {
+            line-height: 1.6;
         }
         footer {
-            background-color: #4CAF50;
+            background: linear-gradient(to right, #4CAF50, #81C784);
             color: white;
             text-align: center;
             padding: 1rem 0;
             position: fixed;
             width: 100%;
             bottom: 0;
+        }
+        .card {
+            background: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: 0.3s;
+            padding: 2rem;
+            margin: 1rem 0;
+        }
+        .card:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .skills, .projects {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .skills div, .projects div {
+            flex: 1;
+            margin: 1rem;
+            padding: 1rem;
+            background: #f4f4f4;
+            border-radius: 8px;
+            text-align: center;
         }
     </style>
 </head>
@@ -48,7 +86,7 @@
     </header>
 
     <div class="container">
-        <div class="info">
+        <div class="info card">
             <h2>基本信息</h2>
             <p><strong>姓名：</strong>严立超</p>
             <p><strong>年龄：</strong>30</p>
@@ -56,37 +94,56 @@
             <p><strong>联系方式：</strong>email@example.com | 123-456-7890</p>
         </div>
 
-        <div class="section">
+        <div class="section card">
             <h2>个人简介</h2>
             <p>我是一名热爱技术的专业软件工程师，拥有丰富的编程经验和扎实的技术基础。喜欢挑战新技术，致力于通过编程解决实际问题。</p>
         </div>
 
-        <div class="section">
+        <div class="section card">
             <h2>教育背景</h2>
             <p>2012 - 2016: 北京大学 计算机科学与技术 学士学位</p>
             <p>2016 - 2018: 清华大学 软件工程 硕士学位</p>
         </div>
 
-        <div class="section">
+        <div class="section card">
             <h2>工作经验</h2>
             <p>2018 - 2020: 某科技公司 初级软件工程师</p>
             <p>2020 - 至今: 某互联网公司 高级软件工程师</p>
         </div>
 
-        <div class="section">
+        <div class="section card">
             <h2>项目展示</h2>
-            <p>项目一：基于机器学习的智能推荐系统</p>
-            <p>项目二：高效的分布式计算平台</p>
+            <div class="projects">
+                <div>
+                    <h3>项目一</h3>
+                    <p>基于机器学习的智能推荐系统</p>
+                </div>
+                <div>
+                    <h3>项目二</h3>
+                    <p>高效的分布式计算平台</p>
+                </div>
+            </div>
         </div>
 
-        <div class="section">
+        <div class="section card">
             <h2>技能</h2>
-            <p>编程语言：Python, Java, C++</p>
-            <p>开发工具：Git, Docker, Jenkins</p>
-            <p>数据库：MySQL, PostgreSQL, MongoDB</p>
+            <div class="skills">
+                <div>
+                    <h3>编程语言</h3>
+                    <p>Python, Java, C++</p>
+                </div>
+                <div>
+                    <h3>开发工具</h3>
+                    <p>Git, Docker, Jenkins</p>
+                </div>
+                <div>
+                    <h3>数据库</h3>
+                    <p>MySQL, PostgreSQL, MongoDB</p>
+                </div>
+            </div>
         </div>
 
-        <div class="section">
+        <div class="section card">
             <h2>兴趣爱好</h2>
             <p>阅读、旅行、跑步、编程</p>
         </div>
