@@ -9,7 +9,7 @@
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background: url('https://www.example.com/your-background-image.jpg') no-repeat center center fixed;
+            background: url('https://images.unsplash.com/photo-1499084732479-de2c02d45fc4') no-repeat center center fixed;
             background-size: cover;
             color: #333;
         }
@@ -81,6 +81,44 @@
             border-radius: 8px;
             text-align: center;
         }
+        .edit-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 1rem;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .edit-button:hover {
+            background-color: #45a049;
+        }
+        .form-container {
+            display: none;
+            margin-top: 2rem;
+        }
+        .form-container input, .form-container textarea {
+            width: 100%;
+            padding: 1rem;
+            margin: 0.5rem 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-container button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 1rem;
+        }
+        .form-container button:hover {
+            background-color: #45a049;
+        }
     </style>
 </head>
 <body>
@@ -91,21 +129,31 @@
     <div class="container">
         <div class="info card">
             <h2>基本信息</h2>
-            <p><strong>姓名：</strong>严立超</p>
-            <p><strong>年龄：</strong>33</p>
-            <p><strong>职业：</strong>软件工程师</p>
-            <p><strong>联系方式：</strong>yanlichaonike@gmail.com | 123-456-7890</p>
+            <p><strong>姓名：</strong><span id="name">严立超</span></p>
+            <p><strong>年龄：</strong><span id="age">30</span></p>
+            <p><strong>职业：</strong><span id="occupation">人工智能老师</span></p>
+            <p><strong>联系方式：</strong><span id="contact">email@example.com | 123-456-7890</span></p>
+            <button class="edit-button" onclick="toggleEditForm()">编辑信息</button>
+        </div>
+
+        <div class="form-container" id="edit-form">
+            <h2>编辑信息</h2>
+            <input type="text" id="edit-name" placeholder="姓名">
+            <input type="number" id="edit-age" placeholder="年龄">
+            <input type="text" id="edit-occupation" placeholder="职业">
+            <input type="text" id="edit-contact" placeholder="联系方式">
+            <button onclick="updateInfo()">保存信息</button>
         </div>
 
         <div class="section card">
             <h2>个人简介</h2>
-            <p>我是一名人工智能老师，热爱教学与技术前沿研究，我毕业院校为东南大学和香港中文大学。</p>
+            <p id="bio">我是一名人工智能老师，热爱教学与技术前沿研究，我毕业院校为东南大学和香港中文大学。</p>
         </div>
 
         <div class="section card">
             <h2>教育背景</h2>
-            <p> 东南大学 </p>
-            <p> 香港中文大学 </p>
+            <p>2012 - 2016: 东南大学 计算机科学与技术 学士学位</p>
+            <p>2016 - 2018: 香港中文大学 软件工程 硕士学位</p>
         </div>
 
         <div class="section card">
@@ -155,5 +203,30 @@
     <footer>
         <p>© 2024 严立超. 保留所有权利.</p>
     </footer>
+
+    <script>
+        function toggleEditForm() {
+            const form = document.getElementById('edit-form');
+            if (form.style.display === 'none' || form.style.display === '') {
+                form.style.display = 'block';
+            } else {
+                form.style.display = 'none';
+            }
+        }
+
+        function updateInfo() {
+            const name = document.getElementById('edit-name').value;
+            const age = document.getElementById('edit-age').value;
+            const occupation = document.getElementById('edit-occupation').value;
+            const contact = document.getElementById('edit-contact').value;
+
+            if (name) document.getElementById('name').innerText = name;
+            if (age) document.getElementById('age').innerText = age;
+            if (occupation) document.getElementById('occupation').innerText = occupation;
+            if (contact) document.getElementById('contact').innerText = contact;
+
+            toggleEditForm();
+        }
+    </script>
 </body>
 </html>
