@@ -106,6 +106,29 @@
         .form-container button:hover {
             background-color: #45a049;
         }
+        .signup-container {
+            display: none;
+            margin-top: 2rem;
+        }
+        .signup-container input, .signup-container select {
+            width: 100%;
+            padding: 1rem;
+            margin: 0.5rem 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .signup-container button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 1rem;
+        }
+        .signup-container button:hover {
+            background-color: #45a049;
+        }
     </style>
 </head>
 <body>
@@ -156,6 +179,17 @@
             <textarea id="edit-content" placeholder="内容"></textarea>
             <button onclick="updateInfo()">保存信息</button>
         </div>
+
+        <button class="edit-button" onclick="toggleSignupForm()">报名</button>
+
+        <div class="signup-container" id="signup-form">
+            <h2>报名信息</h2>
+            <input type="text" id="signup-name" placeholder="姓名">
+            <input type="text" id="signup-phone" placeholder="手机">
+            <input type="text" id="signup-occupation" placeholder="职业">
+            <input type="text" id="signup-intent" placeholder="报考意向">
+            <button onclick="submitSignup()">提交</button>
+        </div>
     </div>
 
     <footer>
@@ -181,6 +215,52 @@
 
             toggleEditForm();
         }
+
+        function toggleSignupForm() {
+            const form = document.getElementById('signup-form');
+            if (form.style.display === 'none' || form.style.display === '') {
+                form.style.display = 'block';
+            } else {
+                form.style.display = 'none';
+            }
+        }
+
+        function submitSignup() {
+            const name = document.getElementById('signup-name').value;
+            const phone = document.getElementById('signup-phone').value;
+            const occupation = document.getElementById('signup-occupation').value;
+            const intent = document.getElementById('signup-intent').value;
+
+            if (name && phone && occupation && intent) {
+                const signupData = {
+                    name,
+                    phone,
+                    occupation,
+                    intent,
+                    timestamp: new Date().toISOString()
+                };
+                
+                let signups = JSON.parse(localStorage.getItem('signups')) || [];
+                signups.push(signupData);
+                localStorage.setItem('signups', JSON.stringify(signups));
+
+                alert('报名成功！');
+                document.getElementById('signup-form').reset();
+                toggleSignupForm();
+            } else {
+                alert('请填写所有字段。');
+            }
+        }
+
+        function displaySignups() {
+            const signups = JSON.parse(localStorage.getItem('signups')) || [];
+            signups.forEach(signup => {
+                console.log(`姓名: ${signup.name}, 手机: ${signup.phone}, 职业: ${signup.occupation}, 报考意向: ${signup.intent}, 报名时间: ${signup.timestamp}`);
+            });
+        }
+
+        // 调试时使用，显示所有报名信息
+        displaySignups();
     </script>
 </body>
 </html>
