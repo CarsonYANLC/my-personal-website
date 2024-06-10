@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>人工智能训练师学习平台</title>
+    <title>人工智能训练师考试平台</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -68,19 +68,6 @@
         .card:hover {
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         }
-        .skills, .projects {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-        }
-        .skills div, .projects div {
-            flex: 1;
-            margin: 1rem;
-            padding: 1rem;
-            background: #f4f4f4;
-            border-radius: 8px;
-            text-align: center;
-        }
         .edit-button {
             background-color: #4CAF50;
             color: white;
@@ -123,85 +110,56 @@
 </head>
 <body>
     <header>
-        <h1>严立超的个人网页</h1>
+        <h1>人工智能训练师考试平台</h1>
     </header>
 
     <div class="container">
         <div class="info card">
-            <h2>基本信息</h2>
-            <p><strong>姓名：</strong><span id="name">严立超</span></p>
-            <p><strong>年龄：</strong><span id="age">30</span></p>
-            <p><strong>职业：</strong><span id="occupation">人工智能老师</span></p>
-            <p><strong>联系方式：</strong><span id="contact">email@example.com | 123-456-7890</span></p>
-            <button class="edit-button" onclick="toggleEditForm()">编辑信息</button>
+            <h2>背景介绍</h2>
+            <p>人工智能训练师是专门负责指导和训练机器学习算法、深度学习模型等人工智能技术的开发和应用的专业人员。</p>
+            <p>为规范从业者从业行为，引导职业教育培训方向，2021年，国家人社局联合工信部相关专家，制定了《人工智能训练师国家职业技能标准（2021年版）》。近年来，人工智能训练师作为一种新兴职业已经普遍应用在各行业。</p>
+            <p>职业技能认证《人工智能训练师》是经人力资源社会保障部门备案的职业技能等级认定，对合格者颁发全国通用的职业技能等级证书。</p>
         </div>
+
+        <div class="section card">
+            <h2>认证要求</h2>
+            <p>职业技能等级分为五个等级：五级/初级工、四级/中级工、三级/高级工、二级/技师、一级/高级技师。</p>
+            <p>申请条件包括从事相关职业工作年限、取得相应职业资格证书或相关专业学历等。</p>
+        </div>
+
+        <div class="section card">
+            <h2>申报资料</h2>
+            <p>基本材料包括：个人申请表、身份证明文件、白底彩色免冠证件照、学历证明文件等。</p>
+            <p>其他材料包括：从事本职业年限书面承诺材料、职业资格证/技能等级证书原件扫描件等。</p>
+        </div>
+
+        <div class="section card">
+            <h2>认证流程</h2>
+            <p>认证流程分为理论知识考试、技能考核及综合评审，均实行百分制，成绩60分以上者为合格。</p>
+        </div>
+
+        <div class="section card">
+            <h2>补贴标准</h2>
+            <p>不同等级职业技能证书的补贴标准从1000元至3000元不等，高级证书（三级）及以上，补贴金额可上浮30%。</p>
+        </div>
+
+        <div class="section card">
+            <h2>培训考试流程</h2>
+            <p>课程分为线上和线下学习，总时长XX小时。考试为线下考试，目前广东省各城市考点包括广州、深圳、珠海等地。</p>
+        </div>
+
+        <button class="edit-button" onclick="toggleEditForm()">编辑信息</button>
 
         <div class="form-container" id="edit-form">
             <h2>编辑信息</h2>
-            <input type="text" id="edit-name" placeholder="姓名">
-            <input type="number" id="edit-age" placeholder="年龄">
-            <input type="text" id="edit-occupation" placeholder="职业">
-            <input type="text" id="edit-contact" placeholder="联系方式">
+            <input type="text" id="edit-title" placeholder="标题">
+            <textarea id="edit-content" placeholder="内容"></textarea>
             <button onclick="updateInfo()">保存信息</button>
-        </div>
-
-        <div class="section card">
-            <h2>个人简介</h2>
-            <p id="bio">我是一名人工智能老师，热爱教学与技术前沿研究，我毕业院校为东南大学和香港中文大学。</p>
-        </div>
-
-        <div class="section card">
-            <h2>教育背景</h2>
-            <p> 东南大学 </p>
-            <p> 香港中文大学 </p>
-        </div>
-
-        <div class="section card">
-            <h2>工作经验</h2>
-            <p>2018 - 2020: 某科技公司 初级软件工程师</p>
-            <p>2020 - 至今: 某互联网公司 高级软件工程师</p>
-        </div>
-
-        <div class="section card">
-            <h2>项目展示</h2>
-            <div class="projects">
-                <div>
-                    <h3>项目一</h3>
-                    <p>基于机器学习的智能推荐系统</p>
-                </div>
-                <div>
-                    <h3>项目二</h3>
-                    <p>高效的分布式计算平台</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="section card">
-            <h2>技能</h2>
-            <div class="skills">
-                <div>
-                    <h3>编程语言</h3>
-                    <p>Python, Java, C++</p>
-                </div>
-                <div>
-                    <h3>开发工具</h3>
-                    <p>Git, Docker, Jenkins</p>
-                </div>
-                <div>
-                    <h3>数据库</h3>
-                    <p>MySQL, PostgreSQL, MongoDB</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="section card">
-            <h2>兴趣爱好</h2>
-            <p>阅读、旅行、跑步、编程</p>
         </div>
     </div>
 
     <footer>
-        <p>© 2024 严立超. 保留所有权利.</p>
+        <p>© 2024 人工智能训练师考试平台. 保留所有权利.</p>
     </footer>
 
     <script>
@@ -215,15 +173,11 @@
         }
 
         function updateInfo() {
-            const name = document.getElementById('edit-name').value;
-            const age = document.getElementById('edit-age').value;
-            const occupation = document.getElementById('edit-occupation').value;
-            const contact = document.getElementById('edit-contact').value;
+            const title = document.getElementById('edit-title').value;
+            const content = document.getElementById('edit-content').value;
 
-            if (name) document.getElementById('name').innerText = name;
-            if (age) document.getElementById('age').innerText = age;
-            if (occupation) document.getElementById('occupation').innerText = occupation;
-            if (contact) document.getElementById('contact').innerText = contact;
+            if (title) document.querySelector('header h1').innerText = title;
+            if (content) document.querySelector('.container .section p').innerText = content;
 
             toggleEditForm();
         }
