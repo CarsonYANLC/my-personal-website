@@ -2,284 +2,81 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>人工智能训练师考试平台</title>
+    <title>我的个人网站</title>
     <style>
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background: url('https://images.unsplash.com/photo-1499084732479-de2c02d45fc4') no-repeat center center fixed;
-            background-size: cover;
-            color: #333;
-        }
-        header {
-            background: rgba(0, 0, 128, 0.8);
-            color: white;
-            padding: 2rem 0;
-            text-align: center;
-            position: relative;
-        }
-        header::after {
-            content: '';
-            display: block;
-            width: 100%;
-            height: 5px;
-            background: #fff;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            background-color: #f4f4f4;
         }
         .container {
             width: 80%;
             margin: auto;
             overflow: hidden;
-            padding: 2rem 0;
-            background: rgba(255, 255, 255, 0.8);
-            border-radius: 10px;
         }
-        .info, .section {
-            margin-bottom: 3rem;
-        }
-        h1, h2 {
-            text-align: center;
-            margin-bottom: 1rem;
-        }
-        .info p, .section p {
-            line-height: 1.6;
-        }
-        footer {
-            background: rgba(0, 0, 128, 0.8);
+        header {
+            background: #50b3a2;
             color: white;
-            text-align: center;
-            padding: 1rem 0;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #e8491d 3px solid;
         }
-        .card {
+        header a {
+            color: #ffffff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        header ul {
+            padding: 0;
+            list-style: none;
+        }
+        header li {
+            display: inline;
+            padding: 0 20px 0 20px;
+        }
+        .content {
+            padding: 20px;
             background: white;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: 0.3s;
-            padding: 2rem;
-            margin: 1rem 0;
+            margin-top: 15px;
         }
-        .card:hover {
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-        }
-        .edit-button {
-            background-color: #4CAF50;
-            color: white;
-            padding: 0.5rem 1rem;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-top: 1rem;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .edit-button:hover {
-            background-color: #45a049;
-        }
-        .form-container {
-            display: none;
-            margin-top: 2rem;
-        }
-        .form-container input, .form-container textarea {
-            width: 100%;
-            padding: 1rem;
-            margin: 0.5rem 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        .form-container button {
-            background-color: #4CAF50;
-            color: white;
-            padding: 1rem 2rem;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-top: 1rem;
-        }
-        .form-container button:hover {
-            background-color: #45a049;
-        }
-        .signup-container {
-            display: none;
-            margin-top: 2rem;
-        }
-        .signup-container input, .signup-container select {
-            width: 100%;
-            padding: 1rem;
-            margin: 0.5rem 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        .signup-container button {
-            background-color: #4CAF50;
-            color: white;
-            padding: 1rem 2rem;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-top: 1rem;
-        }
-        .signup-container button:hover {
-            background-color: #45a049;
-        }
-        .spacer {
-            height: 100px; /* Adjust the height as needed */
-        }
-        .section img {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-            margin-bottom: 1rem;
+        h1, h2, h3 {
+            color: #333333;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>人工智能训练师考试平台</h1>
+        <div class="container">
+            <h1>欢迎来到我的个人网站</h1>
+            <ul>
+                <li><a href="#about">关于我</a></li>
+                <li><a href="#work">工作履历</a></li>
+                <li><a href="#life">生活分享</a></li>
+            </ul>
+        </div>
     </header>
 
-    <div class="container">
-        <div class="info card">
-            <h2>背景介绍</h2>
-            <img src="https://img2.baidu.com/it/u=3618373157,246906142&fm=253&fmt=auto&app=138&f=JPEG?w=570&h=380" alt="背景介绍">
-            <p>人工智能训练师是专门负责指导和训练机器学习算法、深度学习模型等人工智能技术的开发和应用的专业人员。</p>
-            <p>为规范从业者从业行为，引导职业教育培训方向，2021年，国家人社局联合工信部相关专家，制定了《人工智能训练师国家职业技能标准（2021年版）》。近年来，人工智能训练师作为一种新兴职业已经普遍应用在各行业。</p>
-            <p>职业技能认证《人工智能训练师》是经人力资源社会保障部门备案的职业技能等级认定，对合格者颁发全国通用的职业技能等级证书。</p>
-        </div>
+    <div id="about" class="content">
+        <h2>关于我</h2>
+        <p>这里是你的个人介绍，可以包括你的兴趣、爱好、专业技能等。</p>
+    </div>
 
-        <div class="section card">
-            <h2>认证要求</h2>
-            <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0" alt="认证要求">
-            <p>职业技能等级分为五个等级：五级/初级工、四级/中级工、三级/高级工、二级/技师、一级/高级技师。</p>
-            <p>申请条件包括从事相关职业工作年限、取得相应职业资格证书或相关专业学历等。</p>
-        </div>
+    <div id="work" class="content">
+        <h2>工作履历</h2>
+        <p>这里是你的工作履历，可以列出你的工作经历、项目经验等。</p>
+    </div>
 
-        <div class="section card">
-            <h2>申报资料</h2>
-            <img src="https://images.unsplash.com/photo-1517976487492-5750f3195933" alt="申报资料">
-            <p>基本材料包括：个人申请表、身份证明文件、白底彩色免冠证件照、学历证明文件等。</p>
-            <p>其他材料包括：从事本职业年限书面承诺材料、职业资格证/技能等级证书原件扫描件等。</p>
-        </div>
-
-        <div class="section card">
-            <h2>认证流程</h2>
-            <img src="https://images.unsplash.com/photo-1517433456452-f9633a875f6f" alt="认证流程">
-            <p>认证流程分为理论知识考试、技能考核及综合评审，均实行百分制，成绩60分以上者为合格。</p>
-        </div>
-
-        <div class="section card">
-            <h2>补贴标准</h2>
-            <img src="https://images.unsplash.com/photo-1556740749-887f6717d7e4" alt="补贴标准">
-            <p>不同等级职业技能证书的补贴标准从1000元至3000元不等，高级证书（三级）及以上，补贴金额可上浮30%。</p>
-        </div>
-
-        <div class="section card">
-            <h2>培训考试流程</h2>
-            <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7" alt="培训考试流程">
-            <p>课程分为线上和线下学习，总时长XX小时。考试为线下考试，目前广东省各城市考点包括广州、深圳、珠海等地。</p>
-        </div>
-
-        <button class="edit-button" onclick="toggleEditForm()">编辑信息</button>
-
-        <div class="form-container" id="edit-form">
-            <h2>编辑信息</h2>
-            <input type="text" id="edit-title" placeholder="标题">
-            <textarea id="edit-content" placeholder="内容"></textarea>
-            <button onclick="updateInfo()">保存信息</button>
-        </div>
-
-        <button class="edit-button" onclick="toggleSignupForm()">报名</button>
-
-        <div class="signup-container" id="signup-form">
-            <h2>报名信息</h2>
-            <input type="text" id="signup-name" placeholder="姓名">
-            <input type="text" id="signup-phone" placeholder="手机">
-            <input type="text" id="signup-occupation" placeholder="职业">
-            <input type="text" id="signup-intent" placeholder="报考意向">
-            <button onclick="submitSignup()">提交</button>
-        </div>
-
-        <div class="spacer"></div> <!-- Adding extra space -->
-
-        <button class="edit-button" onclick="location.href='view_signups.html'">查看报名信息</button>
+    <div id="life" class="content">
+        <h2>生活分享</h2>
+        <p>这里是你的生活分享，可以分享你的日常生活、旅行经历等。</p>
     </div>
 
     <footer>
-        <p>© 2024 人工智能训练师考试平台. 保留所有权利.</p>
+        <div class="container">
+            <p>版权所有 &copy; 2024 你的名字</p>
+        </div>
     </footer>
-
-    <script>
-        function toggleEditForm() {
-            const form = document.getElementById('edit-form');
-            if (form.style.display === 'none' || form.style.display === '') {
-                form.style.display = 'block';
-            } else {
-                form.style.display = 'none';
-            }
-        }
-
-        function updateInfo() {
-            const title = document.getElementById('edit-title').value;
-            const content = document.getElementById('edit-content').value;
-
-            if (title) document.querySelector('header h1').innerText = title;
-            if (content) document.querySelector('.container .section p').innerText = content;
-
-            toggleEditForm();
-        }
-
-        function toggleSignupForm() {
-            const form = document.getElementById('signup-form');
-            if (form.style.display === 'none' || form.style.display === '') {
-                form.style.display = 'block';
-            } else {
-                form.style.display = 'none';
-            }
-        }
-
-        function submitSignup() {
-            const name = document.getElementById('signup-name').value;
-            const phone = document.getElementById('signup-phone').value;
-            const occupation = document.getElementById('signup-occupation').value;
-            const intent = document.getElementById('signup-intent').value;
-
-            if (name && phone && occupation && intent) {
-                const signupData = {
-                    name,
-                    phone,
-                    occupation,
-                    intent,
-                    timestamp: new Date().toISOString()
-                };
-                
-                let signups = JSON.parse(localStorage.getItem('signups')) || [];
-                signups.push(signupData);
-                localStorage.setItem('signups', JSON.stringify(signups));
-
-                alert('报名成功！');
-                document.getElementById('signup-form').reset();
-                toggleSignupForm();
-            } else {
-                alert('请填写所有字段。');
-            }
-        }
-
-        function displaySignups() {
-            const signups = JSON.parse(localStorage.getItem('signups')) || [];
-            signups.forEach(signup => {
-                console.log(`姓名: ${signup.name}, 手机: ${signup.phone}, 职业: ${signup.occupation}, 报考意向: ${signup.intent}, 报名时间: ${signup.timestamp}`);
-            });
-        }
-
-        // 调试时使用，显示所有报名信息
-        displaySignups();
-    </script>
 </body>
 </html>
