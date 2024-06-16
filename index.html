@@ -18,23 +18,30 @@
         header {
             background: #50b3a2;
             color: white;
-            padding-top: 30px;
+            padding-top: 20px;
             min-height: 70px;
             border-bottom: #e8491d 3px solid;
         }
-        header a {
+        header h1 {
+            margin: 0;
+        }
+        header nav {
+            float: right;
+            margin-top: 10px;
+        }
+        header nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        header nav ul li {
+            display: inline;
+            margin-left: 20px;
+        }
+        header nav a {
             color: #ffffff;
             text-decoration: none;
             text-transform: uppercase;
             font-size: 16px;
-        }
-        header ul {
-            padding: 0;
-            list-style: none;
-        }
-        header li {
-            display: inline;
-            padding: 0 20px 0 20px;
         }
         .content {
             padding: 20px;
@@ -44,38 +51,80 @@
         h1, h2, h3 {
             color: #333333;
         }
+        footer {
+            background: #333333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
     </style>
 </head>
 <body>
     <header>
         <div class="container">
-            <h1>欢迎来到我的个人网站</h1>
-            <ul>
-                <li><a href="#about">关于我</a></li>
-                <li><a href="#work">工作履历</a></li>
-                <li><a href="#life">生活分享</a></li>
-            </ul>
+            <h1>我的个人网站</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">关于我</a></li>
+                    <li><a href="#work">工作履历</a></li>
+                    <li><a href="#life">生活分享</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
     <div id="about" class="content">
         <h2>关于我</h2>
-        <p>这里是你的个人介绍，可以包括你的兴趣、爱好、专业技能等。</p>
+        <p>[您的个人介绍]</p>
     </div>
 
     <div id="work" class="content">
         <h2>工作履历</h2>
-        <p>这里是你的工作履历，可以列出你的工作经历、项目经验等。</p>
+        <section>
+            <h3>教育背景</h3>
+            <p>[您的教育背景]</p>
+        </section>
+        <section>
+            <h3>工作经历</h3>
+            <ul>
+                <li>[您的工作经历1]</li>
+                <li>[您的工作经历2]</li>
+                <!-- 更多工作经历 -->
+            </ul>
+        </section>
+        <section>
+            <h3>项目经验</h3>
+            <ul>
+                <li>[您的项目经验1]</li>
+                <li>[您的项目经验2]</li>
+                <!-- 更多项目经验 -->
+            </ul>
+        </section>
+        <section>
+            <h3>技能专长</h3>
+            <ul>
+                <li>[您的技能专长1]</li>
+                <li>[您的技能专长2]</li>
+                <!-- 更多技能专长 -->
+            </ul>
+        </section>
+        <section>
+            <h3>职业目标</h3>
+            <p>[您的职业目标]</p>
+        </section>
     </div>
 
     <div id="life" class="content">
         <h2>生活分享</h2>
-        <p>这里是你的生活分享，可以分享你的日常生活、旅行经历等。</p>
+        <p>[您的生活分享内容]</p>
     </div>
 
     <footer>
         <div class="container">
-            <p>版权所有 &copy; 2024 你的名字</p>
+            <p>版权所有 &copy; 2024 您的名字</p>
         </div>
     </footer>
 </body>
