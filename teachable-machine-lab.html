@@ -1037,7 +1037,7 @@ function renderClasses() {
     card.className = 'class-card';
     if (STATE.capturingClassId === cls.id) card.classList.add('capturing');
     const statusHtml = cls.samples.length < 2
-      ? '<span class="status-warn">⚠ 至少 2 张</span>'
+      ? '<span class="status-warn">⚠ 至少 20 张</span>'
       : cls.samples.length >= 20
         ? '<span class="status-ok">✓ 充足</span>'
         : '';
@@ -1168,7 +1168,7 @@ async function trainModel() {
   stopCapturing();
   if (!STATE.baseModel) { showMessage('❌ 基础模型未加载完成,请稍等或重启摄像头。', 'error'); return; }
   const validClasses = STATE.classes.filter(c => c.samples.length >= 2);
-  if (validClasses.length < 2) { alert('至少需要 2 个类别,每类至少 2 张样本。'); return; }
+  if (validClasses.length < 2) { alert('至少需要 2 个类别,每类至少 20 张样本。'); return; }
 
   STATE.isTraining = true;
   $('trainBtn').disabled = true; $('predictBtn').disabled = true;
